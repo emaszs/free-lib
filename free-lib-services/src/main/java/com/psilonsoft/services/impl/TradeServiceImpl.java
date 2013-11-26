@@ -48,7 +48,7 @@ public class TradeServiceImpl implements TradeService {
             item.setStock(item.getStock() - 1);
             itemRepository.save(item);
 
-            user.setDebt(user.getDebt() + item.getPrice());
+            // user.setDebt(user.getDebt() + item.getPrice());
             userRepository.save(user);
         }
     }

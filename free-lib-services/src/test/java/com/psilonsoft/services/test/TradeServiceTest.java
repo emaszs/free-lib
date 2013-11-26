@@ -43,7 +43,6 @@ public class TradeServiceTest extends BaseServiceTest {
         item.setStock(1);
         item.setPrice(20);
         user.setId(1L);
-        user.setDebt(0);
 
         Mockito.when(itemRepository.findOne(item.getId())).thenReturn(item);
 
@@ -53,7 +52,6 @@ public class TradeServiceTest extends BaseServiceTest {
             e.printStackTrace();
         }
 
-        Assert.assertEquals("User should have increased debt", 20, user.getDebt());
         Assert.assertEquals("Item should have less stock", 0, item.getStock());
 
     }

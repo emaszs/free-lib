@@ -72,10 +72,9 @@ public class LoginLogoutController {
             return "login";
         }
 
-        log.debug("Logging in user with id {} and role {}", user.getId(), user.getRole());
+        log.debug("Logging in user with id {} and role {}", user.getId());
 
         // all ok - add user details to the session, and redirect to front page.
-        currentUser.setRole(user.getRole());
         currentUser.setUserId(user.getId());
         currentUser.setEmail(user.getEmail());
         return "redirect:/";

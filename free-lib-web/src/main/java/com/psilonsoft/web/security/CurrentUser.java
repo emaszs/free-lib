@@ -33,10 +33,6 @@ public class CurrentUser implements Serializable {
      */
     private String email;
 
-    /**
-     * Role of user. Should map to {@link User#getRole()}
-     */
-    private User.Role role;
 
     public Long getUserId() {
         return userId;
@@ -44,14 +40,6 @@ public class CurrentUser implements Serializable {
 
     public void setUserId(final Long userId) {
         this.userId = userId;
-    }
-
-    public User.Role getRole() {
-        return role;
-    }
-
-    public void setRole(final User.Role role) {
-        this.role = role;
     }
 
     public String getEmail() {

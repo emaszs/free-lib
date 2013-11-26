@@ -68,7 +68,6 @@ public class UsersController {
     @RequestMapping("/users/toggle-active/{userId}")
     public String toggleActive(final ModelMap modelMap, final @PathVariable Long userId) {
         User user = userService.get(userId);
-        user.setActive(!user.isActive());
         userService.save(user);
         return "redirect:/users/list";
     }
@@ -108,8 +107,8 @@ public class UsersController {
 
     @RequestMapping("/users/userInfo")
     public String userInfo(final ModelMap modelMap) {
-        User user = userService.get(currentUser.getUserId());
-        modelMap.put("userDebt", user.getDebt());
+        // User user = userService.get(currentUser.getUserId());
+        modelMap.put("userDebt", -1);
         return "users/userInfo";
     }
 }

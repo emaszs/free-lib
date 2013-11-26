@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.psilonsoft.model.entities.Item;
 import com.psilonsoft.model.entities.User;
-import com.psilonsoft.model.entities.User.Role;
 
 /**
  * 
@@ -31,10 +30,7 @@ public class UnitTestHelpers {
 
     public static User prepareFullyPopulatedUser() {
         User user = new User();
-        user.setActive(true);
         user.setCreatedOn(new Date());
-        user.setRole(Role.REGULAR);
-        user.setDebt(0);
         user.setEmail(new Date().getTime() + "@gmail.com");
         return user;
     }
