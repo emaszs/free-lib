@@ -21,7 +21,7 @@ import com.psilonsoft.web.security.CurrentUser;
  * 
  * Controller that handles login/logout requests.
  * 
- * @author gytis
+ * 
  */
 @Controller
 public class LoginLogoutController {

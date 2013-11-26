@@ -8,7 +8,7 @@ import com.psilonsoft.model.entities.Item;
  * Allows the user to see current inventory
  * US03
  * 
- * @author Emilis
+ * 
  */
 public interface InventoryService {
     

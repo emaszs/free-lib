@@ -5,7 +5,7 @@ import com.psilonsoft.model.entities.User;
 /**
  * Exposes users service.
  * 
- * @author gytis
+ * 
  */
 public interface UserService {
 

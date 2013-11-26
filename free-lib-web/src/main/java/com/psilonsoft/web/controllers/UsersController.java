@@ -27,7 +27,7 @@ import com.psilonsoft.web.security.CurrentUser;
  * 
  * Handles user editing.
  * 
- * @author gytis
+ * 
  */
 @Controller
 public class UsersController {

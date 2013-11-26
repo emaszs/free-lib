@@ -15,7 +15,7 @@ import com.psilonsoft.model.entities.User;
  * 
  * Database manipulation interface for {@link Audit} entity
  * 
- * @author gytis
+ * 
  */
 @Repository
 @Transactional(propagation = Propagation.MANDATORY)

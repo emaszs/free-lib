@@ -5,7 +5,7 @@ package com.psilonsoft.services;
  * 
  * US09
  * 
- * @author Emilis
+ * 
  */
 public interface AccountingService {
     public void clearUserDebt(Long userId);

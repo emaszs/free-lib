@@ -12,7 +12,7 @@ import com.psilonsoft.web.security.CurrentUser;
  * This allows us to expose common functionality to jsp files, without repeating this code in
  * controllers.
  * 
- * @author gytis
+ * 
  */
 @ControllerAdvice
 public class CurrentUserAdvice {

@@ -6,7 +6,7 @@ import com.psilonsoft.model.entities.User;
  * 
  * Login management service.
  * 
- * @author gytis
+ * 
  */
 public interface LoginService {
     

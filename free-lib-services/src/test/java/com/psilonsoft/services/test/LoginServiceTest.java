@@ -15,7 +15,7 @@ import com.psilonsoft.services.LoginService;
  * 
  * tests for {@link LoginService}
  * 
- * @author gytis
+ * 
  */
 public class LoginServiceTest extends BaseServiceTest {
 

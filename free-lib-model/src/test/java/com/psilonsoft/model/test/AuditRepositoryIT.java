@@ -20,7 +20,7 @@ import com.psilonsoft.model.repository.UserRepository;
  * 
  * TODO: add more test cases.
  * 
- * @author gytis
+ * 
  */
 public class AuditRepositoryIT extends BaseModelTestIT {
 

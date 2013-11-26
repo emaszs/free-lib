@@ -21,7 +21,7 @@ import javax.persistence.TemporalType;
  * Audit log entity - represents a single action that user has executed. Used for logging and audit
  * purposes.
  * 
- * @author gytis
+ * 
  */
 @Entity
 @Table(name = "audit")
@@ -74,7 +74,7 @@ public class Audit {
      * 
      * Possible audit actions in our system.
      * 
-     * @author gytis
+     * 
      */
     public enum Action {
         /**

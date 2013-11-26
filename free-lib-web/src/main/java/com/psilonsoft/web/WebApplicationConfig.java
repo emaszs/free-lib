@@ -38,7 +38,7 @@ import com.psilonsoft.web.security.UserRequiredInterceptor;
  * 
  * Spring MVC and our web application central configuration.
  * 
- * @author gytis
+ * 
  */
 @Configuration
 @EnableWebMvc

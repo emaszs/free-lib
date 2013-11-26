@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * 
  * Main page, should have product listings here.
  * 
- * @author gytis
+ * 
  */
 @Controller
 public class IndexController {

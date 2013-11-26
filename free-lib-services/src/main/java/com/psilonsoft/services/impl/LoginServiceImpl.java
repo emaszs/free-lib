@@ -20,7 +20,7 @@ import com.psilonsoft.services.LoginService;
  * The @Service annotation indicates for spring that this is implementation of {@link LoginService}
  * interface
  * 
- * @author gytis
+ * 
  */
 @Service
 public class LoginServiceImpl implements LoginService {

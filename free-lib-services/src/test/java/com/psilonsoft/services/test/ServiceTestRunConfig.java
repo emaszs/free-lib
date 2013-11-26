@@ -17,7 +17,7 @@ import com.psilonsoft.model.repository.UserRepository;
  * ComponentScan says to spring where to search for our services that are annotated with @Service
  * annotation.
  * 
- * @author gytis
+ * 
  */
 @Configuration
 @ComponentScan("com.psilonsoft.services")

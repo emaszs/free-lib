@@ -19,7 +19,7 @@ import com.psilonsoft.web.WebApplicationConfig;
  * Paths, which should be filtered are registerd within {@link WebApplicationConfig}. If this
  * handler executes, we assume that path must be secured.
  * 
- * @author gytis
+ * 
  */
 @Component
 public class UserRequiredInterceptor implements HandlerInterceptor {

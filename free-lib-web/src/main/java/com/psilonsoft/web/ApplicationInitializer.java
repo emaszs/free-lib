@@ -17,7 +17,7 @@ import com.psilonsoft.services.ServicesConfig;
  * 
  * Base servlet initializer needed to bootstrap our spring.
  * 
- * @author gytis
+ * 
  */
 public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 

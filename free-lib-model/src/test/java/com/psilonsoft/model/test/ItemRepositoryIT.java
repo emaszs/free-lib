@@ -13,7 +13,7 @@ import com.psilonsoft.model.repository.ItemRepository;
 
 /**
  * 
- * @author Emilis
+ * 
  */
 public class ItemRepositoryIT extends BaseModelTestIT {
 

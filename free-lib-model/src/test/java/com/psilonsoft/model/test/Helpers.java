@@ -12,7 +12,7 @@ import com.psilonsoft.model.entities.User.Role;
  * 
  * Variuos helper methods for object population for reuse in tests.
  * 
- * @author gytis
+ * 
  */
 public class Helpers {
 

@@ -28,7 +28,7 @@ import org.hibernate.validator.constraints.Email;
  * Note that we have mapped table user_ and not user - this is because user is a reserved word in
  * postgresql database.
  * 
- * @author gytis
+ * 
  */
 @Entity
 @Table(name = "user_")
@@ -107,7 +107,7 @@ public class User {
      * 
      * Possible user roles.
      * 
-     * @author gytis
+     * 
      */
     public enum Role {
 

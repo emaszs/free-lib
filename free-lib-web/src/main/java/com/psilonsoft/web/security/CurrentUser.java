@@ -15,7 +15,7 @@ import com.psilonsoft.model.entities.User;
  * the @Scope annotation makes this bean singleton per session - so we can safely store our user
  * information.
  * 
- * @author gytis
+ * 
  */
 @Component
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)

@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Trade entity - represents a single item being taken at a certain date.
  * 
- * @author Emilis
+ * 
  */
 @Entity
 @Table(name = "trade")

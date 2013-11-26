@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * Item entity - represents any kind of item that can exist in warehouse as well as it's quantity
  * and other info.
  * 
- * @author Emilis
+ * 
  */
 
 @Entity

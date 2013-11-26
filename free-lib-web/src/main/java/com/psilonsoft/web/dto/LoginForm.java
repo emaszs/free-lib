@@ -9,7 +9,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * 
  * It might be our entity, or we might have a custom class
  * 
- * @author gytis
+ * 
  */
 public class LoginForm {
 

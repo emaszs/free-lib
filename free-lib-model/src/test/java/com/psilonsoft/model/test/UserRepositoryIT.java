@@ -17,7 +17,7 @@ import com.psilonsoft.model.repository.UserRepository;
  * 
  * Test classes for {@link UserRepository} class and {@link User} entity.
  * 
- * @author gytis
+ * 
  */
 public class UserRepositoryIT extends BaseModelTestIT {
 

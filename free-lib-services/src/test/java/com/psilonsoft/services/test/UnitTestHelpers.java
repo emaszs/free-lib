@@ -12,7 +12,7 @@ import com.psilonsoft.model.entities.User.Role;
  * 
  * Helper methods for service unit tests
  * 
- * @author Emilis
+ * 
  */
 public class UnitTestHelpers {
     public static List<Item> generateItems(final int numberOfItems) {
