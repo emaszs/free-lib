@@ -82,16 +82,16 @@ public class UserRepositoryIT extends BaseModelTestIT {
         User user = new User();
         user = Helpers.prepareFullyPopulatedUser();
 
-        user.setDebt(0);
+        // user.setDebt(0);
         userRepository.save(user);
         entityManager.flush();
 
-        user.setDebt(1);
+        // user.setDebt(1);
         entityManager.flush();
 
         User retrieved = userRepository.findOne(user.getId());
 
-        Assert.assertEquals("Expecting debt to change", 1,
-                retrieved.getDebt());
+        // Assert.assertEquals("Expecting debt to change", 1,
+        // retrieved.getDebt());
     }
 }

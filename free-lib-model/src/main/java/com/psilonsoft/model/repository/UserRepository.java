@@ -1,8 +1,5 @@
 package com.psilonsoft.model.repository;
 
-import java.util.List;
-
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
@@ -36,31 +33,5 @@ public interface UserRepository extends CrudRepository<User, Long> {
      * @return {@link User} or null if none was found.
      */
     public User findByEmail(final String email);
-    
-    /**
-     * Gets all users by given role.
-     * 
-     * This method demonstrates use of JPQL (Java Persistence API Query Language)
-     * 
-     * The "?1" indicates that we should take first argument from method parameters.
-     * 
-     * @param role - role for which we want to retrieve users.
-     * @return list of {@link User} with matched role, or empty list if none were found.
-     */
-    @Query("select u from User u where u.role=?1")
-    public List<User> findByRole(final User.Role role);
 
-    /**
-     * Gets All inactive users.
-     * 
-     * This methods demonstrates how to use plain old SQL.
-     * 
-     * @return list of {@link Users} that ar not active
-     */
-    @Query(nativeQuery = true, value = "select * from user where active=0")
-    public List<User> findNonActive();
-
-    // @Modifying
-    // @Query("UPDATE User u SET u.debt = ?2 WHERE u = ?1")
-    // public void updateUserDebt(User user, int debt);
 }
