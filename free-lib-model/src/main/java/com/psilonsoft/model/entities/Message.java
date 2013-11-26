@@ -21,11 +21,11 @@ public class Message {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id_from", nullable = false)
+    @JoinColumn(name = "user_from_id", nullable = false)
     private User userFrom;
 
     @ManyToOne
-    @JoinColumn(name = "user_id_to", nullable = false)
+    @JoinColumn(name = "user_to_id", nullable = false)
     private User userTo;
 
     @Column(name = "contents")
