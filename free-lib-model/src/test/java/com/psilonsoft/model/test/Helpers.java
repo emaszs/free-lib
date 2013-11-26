@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.psilonsoft.model.entities.Item;
+import com.psilonsoft.model.entities.Message;
 import com.psilonsoft.model.entities.User;
 
 /**
@@ -41,5 +42,13 @@ public class Helpers {
             items.add(item);
         }
         return items;
+    }
+
+    public static Message prepareMessage(final User to, final User from) {
+        Message m = new Message();
+        m.setUserFrom(from);
+        m.setUserTo(to);
+        m.setContents(new Date().getTime() + "");
+        return m;
     }
 }

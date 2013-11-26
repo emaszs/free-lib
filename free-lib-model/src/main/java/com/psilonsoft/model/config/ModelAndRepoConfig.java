@@ -78,7 +78,7 @@ public class ModelAndRepoConfig {
         factoryBean.setJpaDialect(createJpaDialect());
 
         Properties props = new Properties();
-        props.put("hibernate.hbm2ddl.auto", "update");
+        props.put("hibernate.hbm2ddl.auto", "create");
 
         props.put("jadira.usertype.autoRegisterUserTypes", true);
         props.put("jadira.usertype.databaseZone", "jvm");
