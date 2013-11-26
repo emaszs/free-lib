@@ -66,6 +66,9 @@ public class User {
     @OneToMany
     private List<Message> messagesRecieved;
 
+    @OneToMany
+    List<Message> messagesSent;
+
     public Long getId() {
         return id;
     }

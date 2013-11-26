@@ -11,6 +11,7 @@ import com.psilonsoft.model.entities.Trade;
 @Transactional(propagation = Propagation.MANDATORY)
 public interface TradeRepository extends CrudRepository<Trade, Long> {
     // public List<Trade> findByUser(User user);
+
     @Override
     public Iterable<Trade> findAll();
 }
