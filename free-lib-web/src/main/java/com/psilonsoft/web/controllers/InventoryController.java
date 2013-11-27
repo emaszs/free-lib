@@ -20,7 +20,6 @@ import com.psilonsoft.web.security.CurrentUser;
  * 
  * Handles display of whole inventory with an option to "take" certain items.
  * 
- * 
  */
 
 @Controller
