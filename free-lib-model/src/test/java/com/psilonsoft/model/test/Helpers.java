@@ -58,6 +58,8 @@ public class Helpers {
         b.setUser(user);
         b.setCategories("ccc");
         b.setName("Shakespeare test book");
+        b.setDescription("Very good yes");
+        b.setImg("http://smartmobilestudio.com/wp-content/uploads/2012/06/leather-book-preview.png");
 
         return b;
     }

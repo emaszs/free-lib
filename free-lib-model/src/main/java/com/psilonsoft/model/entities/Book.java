@@ -31,6 +31,12 @@ public class Book {
     @Column(name = "categories")
     private String categories;
 
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "img")
+    private String img;
+
     /**
      * A user that is offering the book
      */
@@ -70,4 +76,19 @@ public class Book {
         this.user = user;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(final String description) {
+        this.description = description;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(final String img) {
+        this.img = img;
+    }
 }
