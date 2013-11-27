@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.psilonsoft.model.entities.Book;
 import com.psilonsoft.model.entities.Item;
 import com.psilonsoft.model.entities.Message;
 import com.psilonsoft.model.entities.User;
@@ -50,5 +51,14 @@ public class Helpers {
         m.setUserTo(to);
         m.setContents(new Date().getTime() + "");
         return m;
+    }
+
+    public static Book prepareBook(final User user) {
+        Book b = new Book();
+        b.setUser(user);
+        b.setCategories("ccc");
+        b.setName("Shakespeare test book");
+
+        return b;
     }
 }
