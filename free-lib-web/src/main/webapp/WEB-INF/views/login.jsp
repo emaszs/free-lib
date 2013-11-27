@@ -20,8 +20,8 @@
 				<!-- globbal errors will be shown here -->
 				<form:errors path=""></form:errors>
 				<div class="control-group pagination-centered">
-					<!-- <label class="control-label" for="email"> <spring:message
-							code="login-header" /></label> -->
+<%-- 					<label class="control-label" for="email"> <spring:message --%>
+<%-- 							code="login-header" /></label> --%>
 					<div class="controls">
 						<div class="control-wrapper form-error">
 							<div class="input-prepend">
@@ -30,7 +30,7 @@
 									var="emailPlaceHolder" />
 								<form:input path="email" placeholder="${emailPlaceHolder}" />
 							</div>
-							<form:errors path="email" class="control-hint">
+							<form:errors path="email" class="help-inline">
 							</form:errors>
 						</div>
 					</div>
