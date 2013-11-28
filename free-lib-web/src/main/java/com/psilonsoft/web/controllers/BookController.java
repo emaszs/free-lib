@@ -2,6 +2,7 @@ package com.psilonsoft.web.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,12 @@ public class BookController {
 
     @Autowired
     private CurrentUser currentUser;
+    
+    @RequestMapping(value = "/book/list")
+    public String listBooks(final ModelMap modelMap) {
+        modelMap.put("books", bookService.getAll());
+        return "book/list";
+    }
 
     @RequestMapping(value = "/book/add")
     public String addBookForm(@ModelAttribute("book") final Book book) {

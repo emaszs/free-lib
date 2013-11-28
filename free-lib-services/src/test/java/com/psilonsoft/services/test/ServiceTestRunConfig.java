@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.psilonsoft.model.repository.AuditRepository;
+import com.psilonsoft.model.repository.BookRepository;
 import com.psilonsoft.model.repository.ItemRepository;
 import com.psilonsoft.model.repository.TradeRepository;
 import com.psilonsoft.model.repository.UserRepository;
@@ -47,5 +48,10 @@ public class ServiceTestRunConfig {
     @Bean
     public TradeRepository tradeRepository() {
         return Mockito.mock(TradeRepository.class);
+    }
+
+    @Bean
+    public BookRepository bookRepository() {
+        return Mockito.mock(BookRepository.class);
     }
 }

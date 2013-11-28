@@ -64,10 +64,10 @@ public class User {
     private List<Book> books;
 
     @OneToMany
-    private List<Message> messagesRecieved;
+    private List<TradeRequest> messagesRecieved;
 
     @OneToMany
-    List<Message> messagesSent;
+    List<TradeRequest> messagesSent;
 
     public Long getId() {
         return id;

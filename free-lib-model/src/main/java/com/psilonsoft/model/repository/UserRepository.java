@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.psilonsoft.model.entities.Message;
+import com.psilonsoft.model.entities.TradeRequest;
 import com.psilonsoft.model.entities.User;
 
 /**
@@ -38,7 +38,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
      */
     public User findByEmail(final String email);
 
-    @Query("select m from Message m where m.userTo.id = ?1")
-    public List<Message> findMessagesBelongingToUser(User user);
+    @Query("select m from TradeRequest m where m.userTo.id = ?1")
+    public List<TradeRequest> findMessagesBelongingToUser(User user);
 
 }

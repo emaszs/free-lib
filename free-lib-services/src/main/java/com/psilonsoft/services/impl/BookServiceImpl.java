@@ -1,5 +1,7 @@
 package com.psilonsoft.services.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,5 +40,10 @@ public class BookServiceImpl implements BookService {
     @Transactional
     public void save(final Book book) {
         bookRepository.save(book);
+    }
+
+    @Override
+    public List<Book> getAll() {
+        return (List<Book>) bookRepository.findAll();
     }
 }

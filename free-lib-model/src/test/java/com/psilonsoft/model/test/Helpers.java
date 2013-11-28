@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.psilonsoft.model.entities.Book;
 import com.psilonsoft.model.entities.Item;
-import com.psilonsoft.model.entities.Message;
+import com.psilonsoft.model.entities.TradeRequest;
 import com.psilonsoft.model.entities.User;
 
 /**
@@ -45,8 +45,9 @@ public class Helpers {
         return items;
     }
 
-    public static Message prepareMessage(final User to, final User from) {
-        Message m = new Message();
+    public static TradeRequest prepareMessage(final User to, final User from, final Book book) {
+        TradeRequest m = new TradeRequest();
+        m.setBook(book);
         m.setUserFrom(from);
         m.setUserTo(to);
         m.setContents(new Date().getTime() + "");

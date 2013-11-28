@@ -5,11 +5,11 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.psilonsoft.model.entities.Message;
+import com.psilonsoft.model.entities.TradeRequest;
 
 @Repository
 @Transactional(propagation = Propagation.MANDATORY)
-public interface MessageRepository extends CrudRepository<Message, Long> {
+public interface TradeRequestRepository extends CrudRepository<TradeRequest, Long> {
 
-    public Message findMessageById(final Long id);
+    public TradeRequest findMessageById(final Long id);
 }
