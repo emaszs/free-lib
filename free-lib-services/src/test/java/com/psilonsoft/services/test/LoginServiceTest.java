@@ -56,7 +56,7 @@ public class LoginServiceTest extends BaseServiceTest {
         // verify that our logingService.login method actually called repository method.
         Mockito.verify(userRepository, Mockito.times(1)).findByEmail(demoEmail);
 
-        // TODO: this test is incomplete. How would you fix it?
+
 
     }
 }

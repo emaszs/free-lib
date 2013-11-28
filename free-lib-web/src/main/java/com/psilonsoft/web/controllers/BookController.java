@@ -5,11 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.psilonsoft.model.entities.Book;
+import com.psilonsoft.model.entities.User;
 import com.psilonsoft.services.BookService;
+import com.psilonsoft.services.TradeRequestService;
 import com.psilonsoft.services.UserService;
 import com.psilonsoft.web.security.CurrentUser;
 
@@ -24,6 +27,9 @@ public class BookController {
     @Autowired
     private CurrentUser currentUser;
     
+    @Autowired
+    private TradeRequestService tradeRequestService;
+
     @RequestMapping(value = "/book/list")
     public String listBooks(final ModelMap modelMap) {
         modelMap.put("books", bookService.getAll());
@@ -55,5 +61,19 @@ public class BookController {
         bookService.save(book);
 
         return "redirect:/book/add";
+    }
+
+    @RequestMapping(value = "/book/send-request/{bookId}", method = { RequestMethod.POST })
+    public String sendTradeRequest(final ModelMap modelMap, @PathVariable final Long bookId) {
+        Book book = bookService.findOne(bookId);
+        User userFrom = userService.get(currentUser.getUserId());
+        User userTo = book.getUser();
+
+        if (book != null && userFrom != null && userTo != null) {
+            tradeRequestService.createNewRequest(userFrom, userTo, book);
+            return "redirect:/book/list";
+        }
+
+        return "redirect:/book/list";
     }
 }

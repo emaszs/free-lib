@@ -39,4 +39,11 @@ public interface BookService {
      * @return List<Book>
      */
     public List<Book> getAll();
+
+    /**
+     * Finds one book by it's id
+     * 
+     * @return Book
+     */
+    public Book findOne(Long bookId);
 }

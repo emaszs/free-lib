@@ -28,7 +28,7 @@ public class TradeRequestRepositoryIT extends BaseModelTestIT {
     private EntityManager entityManager;
 
     @Test
-    public void canCreateAndRetrieveMessage() {
+    public void canCreateAndRetrieveRequest() {
         User user1 = Helpers.prepareFullyPopulatedUser();
         User user2 = Helpers.prepareFullyPopulatedUser();
         Book book = Helpers.prepareBook(user1);

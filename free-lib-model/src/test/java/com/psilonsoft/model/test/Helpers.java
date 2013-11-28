@@ -46,12 +46,12 @@ public class Helpers {
     }
 
     public static TradeRequest prepareMessage(final User to, final User from, final Book book) {
-        TradeRequest m = new TradeRequest();
-        m.setBook(book);
-        m.setUserFrom(from);
-        m.setUserTo(to);
-        m.setContents(new Date().getTime() + "");
-        return m;
+        TradeRequest t = new TradeRequest();
+        t.setBook(book);
+        t.setUserFrom(from);
+        t.setUserTo(to);
+        t.setContents(new Date().getTime() + "");
+        return t;
     }
 
     public static Book prepareBook(final User user) {

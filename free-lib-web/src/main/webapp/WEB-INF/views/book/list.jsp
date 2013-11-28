@@ -15,7 +15,7 @@
 
 	<div class="span9">
 		<c:forEach var="book" items="${books}">
-			<form action="/book/take-book/${book.id}" method="POST">
+			<form action="/book/send-request/${book.id}" method="POST">
 				<img src="${book.img}" width="180px" />
 				<p>
 					<spring:message code="book-name" />

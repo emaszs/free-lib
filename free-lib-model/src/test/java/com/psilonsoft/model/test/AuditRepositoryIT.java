@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.psilonsoft.model.entities.Audit;
-import com.psilonsoft.model.entities.User;
 import com.psilonsoft.model.entities.Audit.Action;
+import com.psilonsoft.model.entities.User;
 import com.psilonsoft.model.repository.AuditRepository;
 import com.psilonsoft.model.repository.UserRepository;
 
@@ -18,7 +18,7 @@ import com.psilonsoft.model.repository.UserRepository;
  * 
  * Test classes for {@link AuditRepository} class and {@link Audit} entity.
  * 
- * TODO: add more test cases.
+ * 
  * 
  * 
  */

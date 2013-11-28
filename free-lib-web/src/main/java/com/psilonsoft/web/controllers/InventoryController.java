@@ -45,7 +45,7 @@ public class InventoryController {
     }
 
     @RequestMapping("/items/take-item/{itemId}")
-    public String takeItem(final ModelMap modelMap, final @PathVariable Long itemId) {
+    public String takeItem(final ModelMap modelMap, @PathVariable final Long itemId) {
         Item item = itemService.getById(itemId);
         User user = userService.get(currentUser.getUserId());
 

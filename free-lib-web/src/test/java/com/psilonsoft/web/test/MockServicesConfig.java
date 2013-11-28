@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import com.psilonsoft.services.BookService;
 import com.psilonsoft.services.ItemService;
 import com.psilonsoft.services.LoginService;
+import com.psilonsoft.services.TradeRequestService;
 import com.psilonsoft.services.TradeService;
 import com.psilonsoft.services.UserService;
 
@@ -36,5 +37,10 @@ public class MockServicesConfig {
     @Bean
     public BookService bookService() {
         return Mockito.mock(BookService.class);
+    }
+    
+    @Bean
+    public TradeRequestService tradeRequestService() {
+        return Mockito.mock(TradeRequestService.class);
     }
 }
