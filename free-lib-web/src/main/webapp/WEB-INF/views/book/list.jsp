@@ -19,7 +19,7 @@
 				<img src="${book.img}" width="180px" />
 				<p>
 					<spring:message code="book-name" />
-					<spring:message code="${item.name}" />
+					<spring:message code="${book.name}" />
 				</p>
 				<p>
 					<spring:message code="book-categories" />

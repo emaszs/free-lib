@@ -53,4 +53,18 @@ public class TradeRequestServiceImpl implements TradeRequestService {
         return tradeRequestRepository.findOne(requestId);
     }
 
+    @Override
+    @Transactional
+    public void deleteRequestsAssociatedWithBook(final Long bookId) {
+        // TODO Auto-generated method stub
+        tradeRequestRepository.deleteAllRequestsForBook(bookId);
+
+    }
+
+    @Override
+    public List<TradeRequest> getRequestsBelongingToUser(final Long userId) {
+        // TODO Auto-generated method stub
+        return tradeRequestRepository.retrieveRequestsBelongingToUser(userId);
+    }
+
 }

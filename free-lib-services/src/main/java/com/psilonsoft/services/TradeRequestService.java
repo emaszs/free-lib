@@ -15,5 +15,7 @@ public interface TradeRequestService {
 
     public TradeRequest findOne(Long requestId);
     
+    public void deleteRequestsAssociatedWithBook(Long bookId);
 
+    public List<TradeRequest> getRequestsBelongingToUser(Long userId);
 }

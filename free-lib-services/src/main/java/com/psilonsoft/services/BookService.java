@@ -25,7 +25,7 @@ public interface BookService {
             String description,
             String img);
 
-    public void removeBook(Book book);
+    public void removeBook(Long bookId);
 
     /**
      * Saves a book to a repository
