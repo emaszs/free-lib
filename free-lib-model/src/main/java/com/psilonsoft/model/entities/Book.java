@@ -1,5 +1,7 @@
 package com.psilonsoft.model.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -20,8 +23,8 @@ import javax.persistence.Table;
 public class Book {
 
     @Id
-    @SequenceGenerator(name = "item_id_seq", sequenceName = "item_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item_id_seq")
+    @SequenceGenerator(name = "book_id_seq", sequenceName = "book_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "book_id_seq")
     @Column(name = "id", updatable = false)
     private Long id;
 
@@ -43,6 +46,9 @@ public class Book {
     @ManyToOne(optional = false)
     @JoinColumn(name = "user_id")
     private User user;
+
+    @OneToMany
+    private List<TradeRequest> tradeRequests;
 
     public Long getId() {
         return id;
@@ -91,4 +97,13 @@ public class Book {
     public void setImg(final String img) {
         this.img = img;
     }
+
+    public List<TradeRequest> getTradeRequests() {
+        return tradeRequests;
+    }
+
+    public void setTradeRequests(final List<TradeRequest> tradeRequests) {
+        this.tradeRequests = tradeRequests;
+    }
+
 }

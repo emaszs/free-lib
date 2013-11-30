@@ -9,6 +9,7 @@ import com.psilonsoft.model.repository.AuditRepository;
 import com.psilonsoft.model.repository.BookRepository;
 import com.psilonsoft.model.repository.ItemRepository;
 import com.psilonsoft.model.repository.TradeRepository;
+import com.psilonsoft.model.repository.TradeRequestRepository;
 import com.psilonsoft.model.repository.UserRepository;
 
 /**
@@ -53,5 +54,10 @@ public class ServiceTestRunConfig {
     @Bean
     public BookRepository bookRepository() {
         return Mockito.mock(BookRepository.class);
+    }
+
+    @Bean
+    public TradeRequestRepository tradeRequestRepository() {
+        return Mockito.mock(TradeRequestRepository.class);
     }
 }

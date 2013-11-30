@@ -35,6 +35,14 @@ public class BookServiceImpl implements BookService {
 
         bookRepository.save(book);
     }
+    
+
+    @Override
+    @Transactional
+    public void removeBook(final Book book) {
+        bookRepository.removeBook(book);
+
+    }
 
     @Override
     @Transactional
@@ -43,12 +51,15 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    @Transactional
     public List<Book> getAll() {
         return (List<Book>) bookRepository.findAll();
     }
 
     @Override
+    @Transactional
     public Book findOne(final Long bookId) {
         return bookRepository.findOne(bookId);
     }
+
 }

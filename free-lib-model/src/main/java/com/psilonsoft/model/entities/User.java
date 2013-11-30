@@ -64,10 +64,10 @@ public class User {
     private List<Book> books;
 
     @OneToMany
-    private List<TradeRequest> messagesRecieved;
+    private List<TradeRequest> tradeRequestsReceived;
 
     @OneToMany
-    List<TradeRequest> messagesSent;
+    List<TradeRequest> tradeRequestsSent;
 
     public Long getId() {
         return id;
@@ -91,6 +91,30 @@ public class User {
 
     public void setCreatedOn(final Date createdOn) {
         this.createdOn = createdOn;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(final List<Book> books) {
+        this.books = books;
+    }
+
+    public List<TradeRequest> getTradeRequestsReceived() {
+        return tradeRequestsReceived;
+    }
+
+    public void setTradeRequestsReceived(final List<TradeRequest> tradeRequestsReceived) {
+        this.tradeRequestsReceived = tradeRequestsReceived;
+    }
+
+    public List<TradeRequest> getTradeRequestsSent() {
+        return tradeRequestsSent;
+    }
+
+    public void setTradeRequestsSent(final List<TradeRequest> tradeRequestsSent) {
+        this.tradeRequestsSent = tradeRequestsSent;
     }
 
     @Override

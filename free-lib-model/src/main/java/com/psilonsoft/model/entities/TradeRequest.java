@@ -26,25 +26,25 @@ import javax.persistence.Table;
  * 
  */
 @Entity
-@Table(name = "tradeRequest")
+@Table(name = "trade_request")
 public class TradeRequest {
 
     @Id
-    @SequenceGenerator(name = "tradeRequest_id_seq", sequenceName = "tradeRequest_id_seq",
+    @SequenceGenerator(name = "trade_request_id_seq", sequenceName = "trade_request_id_seq",
             allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tradeRequest_id_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "trade_request_id_seq")
     @Column(name = "id", updatable = false)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "user_from_id", nullable = false)
     private User userFrom;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "user_to_id", nullable = false)
     private User userTo;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "book_id", nullable = false)
     private Book book;
 
@@ -75,6 +75,14 @@ public class TradeRequest {
         this.userTo = userTo;
     }
 
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(final Book book) {
+        this.book = book;
+    }
+
     public String getContents() {
         return contents;
     }
@@ -83,12 +91,7 @@ public class TradeRequest {
         this.contents = contents;
     }
 
-    public Book getBook() {
-        return book;
-    }
+   
 
-    public void setBook(final Book book) {
-        this.book = book;
-    }
 
 }

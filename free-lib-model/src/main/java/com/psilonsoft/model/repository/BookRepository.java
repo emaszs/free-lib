@@ -15,4 +15,6 @@ public interface BookRepository extends CrudRepository<Book, Long> {
 
     @Query("select b from Book b where b = ?1")
     public void removeBook(final Book book);
+
+
 }

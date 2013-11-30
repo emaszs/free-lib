@@ -1,7 +1,10 @@
 package com.psilonsoft.services.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.psilonsoft.model.entities.Book;
 import com.psilonsoft.model.entities.TradeRequest;
@@ -15,6 +18,7 @@ public class TradeRequestServiceImpl implements TradeRequestService {
     TradeRequestRepository tradeRequestRepository;
 
     @Override
+    @Transactional
     public void createNewRequest(final User userFrom, final User userTo, final Book book) {
         TradeRequest tradeRequest = new TradeRequest();
         tradeRequest.setBook(book);
@@ -25,6 +29,28 @@ public class TradeRequestServiceImpl implements TradeRequestService {
         tradeRequest.setContents("void");
 
         tradeRequestRepository.save(tradeRequest);
+    }
+
+    @Override
+    @Transactional
+    public List<TradeRequest> getAll() {
+        // TODO Auto-generated method stub
+        return (List<TradeRequest>) tradeRequestRepository.findAll();
+    }
+
+    @Override
+    @Transactional
+    public void deleteRequest(final Long requestId) {
+        // TODO Auto-generated method stub
+        tradeRequestRepository.delete(requestId);
+
+    }
+
+    @Override
+    @Transactional
+    public TradeRequest findOne(final Long requestId) {
+        // TODO Auto-generated method stub
+        return tradeRequestRepository.findOne(requestId);
     }
 
 }
