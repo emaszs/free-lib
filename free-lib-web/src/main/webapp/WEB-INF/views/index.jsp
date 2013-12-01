@@ -7,31 +7,17 @@
 
 <jsp:include page="common/header.jsp"></jsp:include>
 
-<jsp:include page="common/currentUser.jsp"></jsp:include>
 
 <div class="container">
+
+<jsp:include page="common/navigation.jsp"></jsp:include>
+
 	<div>
 		<!-- <a href="users/list" style="color: white"> -->
 		<form action="users/list" method="GET">
 			<button class="btn btn-success">
 				<spring:message code="users-list" />
 				<!-- </a> -->
-			</button>
-		</form>
-	</div>
-
-	<div>
-		<form action="items/inventory" method="GET">
-			<button class="btn btn-success">
-				<spring:message code="items-inventory" />
-			</button>
-		</form>
-	</div>
-
-    	<div>
-		<form action="users/userInfo" method="GET">
-			<button class="btn btn-success">
-				<spring:message code="user-userInfo" />
 			</button>
 		</form>
 	</div>

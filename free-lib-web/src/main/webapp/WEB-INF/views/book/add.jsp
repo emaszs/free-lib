@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" isELIgnored="false"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -8,7 +8,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 
 <div class="container">
-
+	<jsp:include page="../common/navigation.jsp"></jsp:include>
 	<h3>
 		<spring:message code="add-book" />
 	</h3>

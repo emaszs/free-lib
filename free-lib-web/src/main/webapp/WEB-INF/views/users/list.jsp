@@ -8,22 +8,14 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 
 <div class="container">
+<jsp:include page="../common/navigation.jsp"></jsp:include>
 <h3><spring:message code="user-list"/></h3>
     <div class="centered m20">
 		<div class="span9">
 		    <c:forEach var="user" items="${users}">
 			<div class="rounded">
 				<form action="/users/toggle-active/${user.id}" method="POST">
-					<h5><a href="/users/edit/${user.id}">${user.email}</a></h5>
-					<p>
-						<spring:message code="user-list-active" /> <span class="nortal"><spring:message code="${user.active}"/></span>
-					</p>
-					<p>
-						<spring:message code="user-list-role" /> <span class="nortal"><spring:message code="user-list-role-${user.role}"/></span>
-					</p>
-					<button class="btn btn-success">
-						<spring:message code="users-toggle-active"/>
-					</button>
+					<h5>${user.email}</h5>
 				</form>
 			</div>
 			</c:forEach>

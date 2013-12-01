@@ -8,7 +8,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 
 <div class="container">
-
+	<jsp:include page="../common/navigation.jsp"></jsp:include>
 	<h3>
 		<spring:message code="list-trade-requests" />
 	</h3>
