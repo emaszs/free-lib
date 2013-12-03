@@ -16,32 +16,32 @@
 	<form:form action="/book/add" method="POST" commandName="book">
 
 		<div class="control-group">
-			<label for="name">Name:</label>
-			<form:input path="name" placeholder="name" />
+			<label for="name"><spring:message code="book-name" /></label>
+			<form:input path="name" placeholder="" />
 			<form:errors path="name" class="help-inline"></form:errors>
 		</div>
 
 
 		<div class="control-group">
-			<label for="categories">Categories:</label>
-			<form:input path="categories" placeholder="categories" />
+			<label for="categories"><spring:message code="book-categories" /></label>
+			<form:input path="categories" placeholder="" />
 			<form:errors path="categories" class="help-inline"></form:errors>
 		</div>
 
 		<div class="control-group">
-			<label for="description">Description:</label>
+			<label for="description"><spring:message code="book-description" /></label>
 			<form:textarea path="description" />
 			<form:errors path="description" class="help-inline"></form:errors>
 		</div>
 
 		<div class="control-group">
-			<label for="img">Image:</label>
-			<form:input path="img" placeholder="img url" />
+			<label for="img"><spring:message code="book-img" /></label>
+			<form:input path="img" placeholder="url" />
 			<form:errors path="img" class="help-inline"></form:errors>
 		</div>
 
 
-		<form:button class="btn btn-primary">Add</form:button>
+		<form:button class="btn btn-primary"><spring:message code="book-add" /></form:button>
 	</form:form>
 </div>
 

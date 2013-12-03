@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="navbar-inner">
-		<a class="brand" href="/"><spring:message code="fee-lib-home" /></a>
+		<a class="brand" href="/"><spring:message code="free-lib-home" /></a>
 		<div class="nav-collapse">
 			<ul class="nav">
 				<a class="btn btn-default" href="/book/list"><spring:message
