@@ -6,9 +6,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.psilonsoft.model.entities.User;
-import com.psilonsoft.model.repository.AuditRepository;
 import com.psilonsoft.model.repository.UserRepository;
-import com.psilonsoft.services.AuditService;
 import com.psilonsoft.services.LoginService;
 
 /**
@@ -22,8 +20,6 @@ public class LoginServiceTest extends BaseServiceTest {
     @Autowired
     private LoginService loginService;
 
-    @Autowired
-    private AuditService auditService;
 
     /**
      * This is a special class - a Mock
@@ -34,8 +30,6 @@ public class LoginServiceTest extends BaseServiceTest {
     /**
      * This is a special class - a Mock
      */
-    @Autowired
-    private AuditRepository auditRepository;
 
     @Test
     public void loginMethodWorksWhenUserExists() {

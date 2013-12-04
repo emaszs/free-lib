@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.psilonsoft.model.entities.User;
-import com.psilonsoft.services.TradeService;
 import com.psilonsoft.services.UserService;
 import com.psilonsoft.web.security.CurrentUser;
 
@@ -37,8 +36,6 @@ public class UsersController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private TradeService tradeService;
 
     /**
      * Special spring method, that registers custom conversion filter for String <-> Date

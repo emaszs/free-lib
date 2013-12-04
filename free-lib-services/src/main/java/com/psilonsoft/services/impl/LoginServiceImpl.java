@@ -6,10 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.psilonsoft.model.entities.Audit.Action;
 import com.psilonsoft.model.entities.User;
 import com.psilonsoft.model.repository.UserRepository;
-import com.psilonsoft.services.AuditService;
 import com.psilonsoft.services.LoginService;
 
 /**
@@ -27,8 +25,6 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private UserRepository userRepository;
     
-    @Autowired
-    private AuditService auditService;
     
     @Override
     @Transactional
@@ -43,8 +39,6 @@ public class LoginServiceImpl implements LoginService {
             userRepository.save(user);
         }
         
-        auditService.logAction(Action.LOGIN, user.getId());
-
         return user;
     }
 }

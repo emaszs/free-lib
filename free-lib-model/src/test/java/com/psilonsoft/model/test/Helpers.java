@@ -1,11 +1,8 @@
 package com.psilonsoft.model.test;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import com.psilonsoft.model.entities.Book;
-import com.psilonsoft.model.entities.Item;
 import com.psilonsoft.model.entities.TradeRequest;
 import com.psilonsoft.model.entities.User;
 
@@ -30,20 +27,6 @@ public class Helpers {
         return user;
     }
 
-    public static List<Item> generateItems(final int numberOfItems) {
-        List<Item> items = new ArrayList<Item>();
-
-        for (int i = 0; i < numberOfItems; i++) {
-            Item item = new Item();
-            item.setName(new Date().getTime() + "");
-            item.setPrice(1);
-            item.setStock(3);
-            item.setImage("http://www.assorti.lt/userfiles/uploader/404x303.g/selga-chocolate-sokolado-skonio-sausainiai-180g.jpg");
-
-            items.add(item);
-        }
-        return items;
-    }
 
     public static TradeRequest prepareMessage(final User to, final User from, final Book book) {
         TradeRequest t = new TradeRequest();

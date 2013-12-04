@@ -34,14 +34,12 @@ public class TradeRequestServiceImpl implements TradeRequestService {
     @Override
     @Transactional
     public List<TradeRequest> getAll() {
-        // TODO Auto-generated method stub
         return (List<TradeRequest>) tradeRequestRepository.findAll();
     }
 
     @Override
     @Transactional
     public void deleteRequest(final Long requestId) {
-        // TODO Auto-generated method stub
         tradeRequestRepository.delete(requestId);
 
     }
@@ -49,21 +47,18 @@ public class TradeRequestServiceImpl implements TradeRequestService {
     @Override
     @Transactional
     public TradeRequest findOne(final Long requestId) {
-        // TODO Auto-generated method stub
         return tradeRequestRepository.findOne(requestId);
     }
 
     @Override
     @Transactional
     public void deleteRequestsAssociatedWithBook(final Long bookId) {
-        // TODO Auto-generated method stub
         tradeRequestRepository.deleteAllRequestsForBook(bookId);
 
     }
 
     @Override
     public List<TradeRequest> getRequestsBelongingToUser(final Long userId) {
-        // TODO Auto-generated method stub
         return tradeRequestRepository.retrieveRequestsBelongingToUser(userId);
     }
 

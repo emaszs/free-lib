@@ -75,23 +75,4 @@ public class UserRepositoryIT extends BaseModelTestIT {
         Assert.assertNotNull("Expected to find user with email", retrieved);
         Assert.assertEquals("Expected user ids to match", user.getId(), retrieved.getId());
     }
-
-    @Transactional
-    @Test
-    public void userDebtCanBeUpdated() {
-        User user = new User();
-        user = Helpers.prepareFullyPopulatedUser();
-
-        // user.setDebt(0);
-        userRepository.save(user);
-        entityManager.flush();
-
-        // user.setDebt(1);
-        entityManager.flush();
-
-        User retrieved = userRepository.findOne(user.getId());
-
-        // Assert.assertEquals("Expecting debt to change", 1,
-        // retrieved.getDebt());
-    }
 }
